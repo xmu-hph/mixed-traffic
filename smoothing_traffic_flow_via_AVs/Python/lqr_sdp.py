@@ -46,3 +46,5 @@ def lqr_sdp(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
     K = Zd@np.linalg.inv(Xd)
     
     return K
+if __name__ == '__main__':
+    lqr_sdp(5,20,0.3,0.4,0.5,1)

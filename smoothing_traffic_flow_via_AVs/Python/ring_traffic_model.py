@@ -25,9 +25,9 @@ def ring_traffic_model(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
         alpha2 = alpha+beta
         alpha3 = beta
     else:
-        alpha1 = 2.6;
-        alpha2 = 3;
-        alpha3 = 2;
+        alpha1 = 2.6
+        alpha2 = 3
+        alpha3 = 2
 
 
     A1 = np.array([[0,-1], [alpha1,-alpha2]])
@@ -75,3 +75,6 @@ def ring_traffic_model(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
     R = gamma_u*np.identity(AV_number)
     
     return A, B, Q, R
+if __name__ == "__main__":
+    N,s_star,gamma_s,gamma_v,gamma_u,AV_number=5,20,0.3,0.6,0.4,1
+    ring_traffic_model(N,s_star,gamma_s,gamma_v,gamma_u,AV_number)

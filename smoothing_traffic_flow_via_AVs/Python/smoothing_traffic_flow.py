@@ -78,9 +78,9 @@ s_st = 5
 s_go = 35
 
 if (scenario==1) or (scenario==2):
-    TotalTime=100
+    TotalTime=20#100
 elif (scenario==3):
-    TotalTime = 700
+    TotalTime = 70#700
 
 Tstep = 0.01
 NumStep = int(TotalTime/Tstep)
@@ -93,7 +93,7 @@ else:
 
 ActuationTimeEnd = math.inf
 if (scenario==3):
-    ActuationTime = 300
+    ActuationTime = 10#300
     ActuationTimeEnd = math.inf             #Change to 450 for experiment B of Controllability Analysis
 
 
