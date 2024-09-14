@@ -1,4 +1,5 @@
 import numpy as np
+#from pattern_generation import pattern_generation
 def pattern_invariance(S):
 #Generate a maximally sparsity-wise invariant (MSI) subplace with respect to X
 # See Section IV of the following paper
@@ -26,3 +27,6 @@ def pattern_invariance(S):
 
 
     return X
+if __name__ == '__main__':
+    S = pattern_generation(10, 1, 1)
+    pattern_invariance(S)

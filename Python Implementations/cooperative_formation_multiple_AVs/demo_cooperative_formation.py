@@ -264,7 +264,7 @@ if spacing_or_velocity == 0:
     ax.set_zlabel("Spacing from vehicle ahead")
     title = "N=" + str(N) + ", mix=" + str(mix)
     ax.set_title(title)
-    plt.show()
+    #plt.show()
 
 if spacing_or_velocity == 1:
     ax = plt.axes(projection ='3d')
@@ -286,7 +286,7 @@ if spacing_or_velocity == 1:
     ax.set_zlabel("Vehicle Velocity")
     title = "N=" + str(N) + ", mix=" + str(mix) 
     ax.set_title(title)
-    plt.show()
+    #plt.show()
 
 
 # Animation

@@ -17,7 +17,7 @@ def lqr_sdp(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
     H = np.identity(n)
     for i in range(0,N):
         H[2*i,2*i] = 0
-    
+    # H矩阵的作用是对速度的导数影响
     
     #X = cp.Variable((n,n), symmetric=True)
     #Z = cp.Variable((m,n))

@@ -6,7 +6,7 @@ from array import *
 import numpy as np
 
 def ring_traffic_model(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
-
+    # gamma_s,gamma_v,gamma_u是状态信息的权重，分别是间距、速度以及输入
     # Generate a dynamic model for 
     #OVM
 
@@ -14,9 +14,9 @@ def ring_traffic_model(N,s_star,gamma_s,gamma_v,gamma_u,AV_number):
 
     alpha  = 0.6
     beta   = 0.9
-    v_max  = 30
-    s_st   = 5
-    s_go   = 35
+    v_max  = 30#最大速度
+    s_st   = 5#静止间距
+    s_go   = 35#流畅运行间距
 
 
     # General

@@ -19,7 +19,7 @@ np.random.seed(156379)
 #Scenario 1 is sharp braking at 20 seconds
 #Scenario 2 is random distribution of vehicles and uniform distribution of initial velocity
 #Scenario 3 is Experiment B of "Controllability Analysis and Optimal Control of Mixed Traffic Flow with Human-driven and Autonomous Vehicles"
-scenario = 3
+scenario = 1
 
 #If spacing_or_velocity == 0 then display spacing graph, if 1 then display velocity graph, if 2 then display position color graph
 spacing_or_velocity = 2
@@ -78,7 +78,7 @@ s_st = 5
 s_go = 35
 
 if (scenario==1) or (scenario==2):
-    TotalTime=20#100
+    TotalTime=70#100
 elif (scenario==3):
     TotalTime = 70#700
 
@@ -201,7 +201,7 @@ for k in range(0,NumStep-2):
     
     
     
-    if (k*Tstep>20) and (k*Tstep<23) and (scenario == 1):
+    if (k*Tstep>10) and (k*Tstep<13) and (scenario == 1):
         S[k,brakeID,2]=-3
         
     

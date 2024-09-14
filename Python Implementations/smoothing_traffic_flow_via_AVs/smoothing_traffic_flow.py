@@ -354,7 +354,11 @@ if spacing_or_velocity==0:
     ax.set_zlabel("Spacing from vehicle ahead")
     title = "N=" + str(N) + ", mix=" + str(mix) +", controller=" + str(controllerType)
     ax.set_title(title)
-    plt.show()
+    # 保存图像到文件，例如保存为 'plot.png'
+    plt.savefig('images/plot_0.png')
+    # 关闭图像，释放内存
+    plt.close()
+    #plt.show()
     
 if spacing_or_velocity==1:
     ax = plt.axes(projection ='3d')
@@ -375,7 +379,11 @@ if spacing_or_velocity==1:
     ax.set_zlabel("Vehicle Velocity")
     title = "N=" + str(N) + ", mix=" + str(mix) +", controller=" + str(controllerType)
     ax.set_title(title)
-    plt.show()    
+    # 保存图像到文件，例如保存为 'plot.png'
+    plt.savefig('images/plot_1.png')
+    # 关闭图像，释放内存
+    plt.close()
+    #plt.show() 
         
         
         
@@ -404,7 +412,11 @@ if spacing_or_velocity==2:
         
     plt.xlim(20000, 60000)
     plt.ylim(0,400)
-    plt.show()
+    # 保存图像到文件，例如保存为 'plot.png'
+    plt.savefig('images/plot_2.png')
+    # 关闭图像，释放内存
+    plt.close()
+    #plt.show()
     
 
 #plt.plot(S[:,-1,2])
@@ -472,4 +484,7 @@ def update(frame):
     return position
 
 ani = FuncAnimation(fig, update, frames = 7000, interval = 5, init_func=init, repeat=True, blit=True)
-plt.show()      
+# 保存到服务器，指定路径和文件格式，例如保存为 mp4
+output_file_path = 'images/animation.mp4'  # 替换成服务器的存储路径
+ani.save(output_file_path, writer='ffmpeg', fps=30)
+#plt.close()      
