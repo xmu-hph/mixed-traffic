@@ -359,7 +359,12 @@ if spacing_or_velocity==0:
     ax.set_zlabel("Spacing from vehicle ahead")
     title = "N=" + str(N) + ", mix=" + str(mix) +", controller=" + str(controllerType)
     ax.set_title(title)
-    plt.show()
+    # 保存图像到文件，例如保存为 'plot.png'
+    plt.savefig('images/plot_0.png')
+
+    # 关闭图像，释放内存
+    plt.close()
+    #plt.show()
     
 if spacing_or_velocity==1:
     ax = plt.axes(projection ='3d')
@@ -409,7 +414,12 @@ if spacing_or_velocity==2:
         
     plt.xlim(20000, 60000)
     plt.ylim(0,400)
-    plt.show()
+    # 保存图像到文件，例如保存为 'plot.png'
+    plt.savefig('images/plot_2.png')
+
+    # 关闭图像，释放内存
+    plt.close()
+    #plt.show()
     
 
 #plt.plot(S[:,-1,2])
